@@ -1677,7 +1677,20 @@ class Player extends Human implements CommandSender, InventoryHolder, ChunkLoade
 		return $this->moving;
 	}
 
-		public function onUpdate($currentTick){
+	public function sendAttributes(bool $sendAll = false){
+		$entries = $sendAll ? $this->attributeMap->getAll() : $this->attributeMap->needSend();
+		if(count($entries) > 0){
+			$pk = new UpdateAttributesPacket();
+			$pk->entityId = $this->id;
+			$pk->entries = $entries;
+			$this->dataPacket($pk);
+			foreach($entries as $entry){
+				$entry->markSynchronized();
+			}
+		}
+	}
+
+	public function onUpdate($currentTick){
 		if(!$this->loggedIn){
 			return false;
 		}
