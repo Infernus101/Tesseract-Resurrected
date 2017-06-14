@@ -1,17 +1,17 @@
 ![Tesseract](http://i.imgur.com/1ga0ATy.jpg)
-## Tesseract Introduction
+## Tesseract-Resurrected Introduction
 -------------
-**Tesseract is the advanced server software based on Genisys, PocketMine-MP, and PMMP**<br>
+**Tesseract-Resurrected is the advanced server software based on Tesseract, Genisys, PocketMine-MP, and PMMP**<br>
 
 ## Notice
 
-**Tesseract is on 1.1, and is very unstable, please feel free to report issues that you have with the software.** <br>
+**Tesseract-Resurrected is on 1.1, and is very unstable, please feel free to report issues that you have with the software.** <br>
 
 ## Builds
 __Travis-CI Build:__<br>
- [![Travis-CI](https://travis-ci.org/TesseractTeam/Tesseract.svg?branch=master)](https://travis-ci.org/TesseractTeam/Tesseract)<br>
+ [![Travis-CI](https://travis-ci.org/Infernus101/Tesseract-Resurrected.svg?branch=master)](https://travis-ci.org/TesseractTeam/Tesseract)<br>
  __CircleCI Build__<br>
-[![CircleCI](https://circleci.com/gh/circleci/mongofinil.svg?&style=shield&circle-token=8678c9589c2e09b659783b4d7a65365fa982127e/)](https://circleci.com/gh/TesseractTeam/Tesseract)
+[![CircleCI](https://circleci.com/gh/circleci/mongofinil.svg?&style=shield&circle-token=8678c9589c2e09b659783b4d7a65365fa982127e/)](https://circleci.com/gh/Infernus101/Tesseract-Resurrected)
 
 ## Quick Links (Instead of scrolling, click these!)
 
@@ -21,19 +21,10 @@ __[Acknowledgements](#acknowledgements)__ <br>
 __[License](#license)__ <br>
 __[Third Party Libraries and Protocols Used](#ThirdpartyLibrariesProtocolsUsed)__ <br>
 
-## Installation
-
-**Self-installation:**<br>
-Supported platforms: Linux, Windows, OS X, Raspberry Pi, and ODROID. <br>
-[Installation](https://github.com/TesseractTeam/Tesseract/wiki/Installation)<br>
-
-__[Back to QuickLinks](#quick-links-instead-of-scrolling-click-these)__
-<br>
-
 ## Resources
 
 **External Links**<br>
-Your Tesseract Server needs Visual Studio C++ Redistributable 2015 (If you are on windows). <br>
+Your Tesseract-Resurrected Server needs Visual Studio C++ Redistributable 2015 (If you are on windows). <br>
 It can be downloaded
 __[here](https://www.microsoft.com/en-us/download/details.aspx?id=48145)__ <br>
 
@@ -42,8 +33,8 @@ __[Back to QuickLinks](#quick-links-instead-of-scrolling-click-these)__
 
 ## Acknowledgements
 
-- Tesseract is a "spoon" of **[Genisys](https://github.com/iTXTech/Genisys/), and [PMMP](https://github.com/pmmp/PocketMine-MP/)**
-- Most of the original code was written by ITXTech, PocketMine-MP, and the PMMP Team. <br>
+- Tesseract-Resurrected is a "spoon" of **[Tesseract](https://github.com/TesseractTeam/Tesseract/), **[Genisys](https://github.com/iTXTech/Genisys/), and [PMMP](https://github.com/pmmp/PocketMine-MP/)**
+- Most of the original code was written by TesseractTeam, ITXTech, PocketMine-MP, and the PMMP Team. <br>
 
 __[Back to QuickLinks](#quick-links-instead-of-scrolling-click-these)__<br>
 
@@ -63,7 +54,7 @@ __[Back to QuickLinks](#quick-links-instead-of-scrolling-click-these)__<br>
 	You should have received a copy of the GNU Lesser General Public License
 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-__[License Page](https://github.com/TesseractTeam/Tesseract/blob/master/LICENSE)__
+__[License Page](https://github.com/Infernus101/Tesseract-Resurrected/blob/master/LICENSE)__
 <br>
 __[Back to QuickLinks](#quick-links-instead-of-scrolling-click-these)__
 <br>
