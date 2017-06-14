@@ -15,7 +15,6 @@ __Travis-CI Build:__<br>
 
 ## Quick Links (Instead of scrolling, click these!)
 
-__[Installation](#installation)__ <br>
 __[Resources](#resources)__ <br>
 __[Acknowledgements](#acknowledgements)__ <br>
 __[License](#license)__ <br>
@@ -33,7 +32,7 @@ __[Back to QuickLinks](#quick-links-instead-of-scrolling-click-these)__
 
 ## Acknowledgements
 
-- Tesseract-Resurrected is a "spoon" of **[Tesseract](https://github.com/TesseractTeam/Tesseract/), **[Genisys](https://github.com/iTXTech/Genisys/), and [PMMP](https://github.com/pmmp/PocketMine-MP/)**
+- Tesseract-Resurrected is a "spoon" of **[Tesseract](https://github.com/TesseractTeam/Tesseract/), [Genisys](https://github.com/iTXTech/Genisys/), and [PMMP](https://github.com/pmmp/PocketMine-MP/)**
 - Most of the original code was written by TesseractTeam, ITXTech, PocketMine-MP, and the PMMP Team. <br>
 
 __[Back to QuickLinks](#quick-links-instead-of-scrolling-click-these)__<br>
