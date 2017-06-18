@@ -51,6 +51,7 @@ use pocketmine\event\inventory\CraftItemEvent;
 use pocketmine\event\inventory\InventoryCloseEvent;
 use pocketmine\event\inventory\InventoryPickupArrowEvent;
 use pocketmine\event\inventory\InventoryPickupItemEvent;
+use pocketmine\event\player\cheat\PlayerIllegalMoveEvent;
 use pocketmine\event\player\PlayerExhaustEvent;
 use pocketmine\event\player\PlayerTextPreSendEvent;
 use pocketmine\event\player\PlayerAchievementAwardedEvent;
@@ -251,6 +252,8 @@ class Player extends Human implements CommandSender, InventoryHolder, ChunkLoade
 	protected $autoJump = true;
 	protected $allowFlight = false;
 	protected $flying = false;
+	
+	protected $allowMovementCheats = false;
 
 	private $needACK = [];
 
@@ -425,6 +428,14 @@ class Player extends Human implements CommandSender, InventoryHolder, ChunkLoade
 
 	public function hasAutoJump() : bool{
 		return $this->autoJump;
+	}
+
+	public function allowMovementCheats() : bool{
+		return $this->allowMovementCheats;
+	}
+
+	public function setAllowMovementCheats(bool $value = false){
+		$this->allowMovementCheats = $value;
 	}
 
 	/**
@@ -655,6 +666,8 @@ class Player extends Human implements CommandSender, InventoryHolder, ChunkLoade
 		$this->rawUUID = null;
 
 		$this->creationTime = microtime(true);
+		
+		$this->allowMovementCheats = (bool) $this->server->getProperty("player.anti-cheat.allow-movement-cheats", false);
 
 		Entity::setHealth(20);
 	}
@@ -1544,6 +1557,18 @@ class Player extends Human implements CommandSender, InventoryHolder, ChunkLoade
 			}
 
 			$diff = ($diffX ** 2 + $diffY ** 2 + $diffZ ** 2) / ($tickDiff ** 2);
+			
+			if($this->isSurvival() and !$revert and $diff > 0.0625){
+				$ev = new PlayerIllegalMoveEvent($this, $newPos);
+				$ev->setCancelled($this->allowMovementCheats);
+
+				$this->server->getPluginManager()->callEvent($ev);
+
+				if(!$ev->isCancelled()){
+					$revert = true;
+					$this->server->getLogger()->warning($this->getServer()->getLanguage()->translateString("pocketmine.player.invalidMove", [$this->getName()]));
+				}
+			}
 
 			if($diff > 0){
 				$this->x = $newPos->x;
